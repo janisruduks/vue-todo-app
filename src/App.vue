@@ -1,9 +1,10 @@
 <template>
   <v-app>
-    <v-main class="bg">
+    <v-main>
       <v-app-bar :elevation="3">
-        <v-app-bar-title>My tasks app</v-app-bar-title>
-        <v-app-bar-nav-icon icon="mdi-circle"></v-app-bar-nav-icon>
+        <v-app-bar-title><v-btn href="/">My tasks app</v-btn></v-app-bar-title>
+        <ThemeSwitcherButton />
+        <v-app-bar-nav-icon icon="mdi-circle" />
       </v-app-bar>
       <TaskSection />
       <v-footer>
@@ -15,12 +16,7 @@
   </v-app>
 </template>
 
-<style>
-.bg {
-  background-color: #f5f5f5;
-}
-</style>
-
 <script setup lang="ts">
 import TaskSection from "@/components/TaskSection.vue";
+import ThemeSwitcherButton from "./components/ThemeSwitcherButton.vue";
 </script>
